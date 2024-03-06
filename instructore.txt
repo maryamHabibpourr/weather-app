@@ -1,0 +1,22 @@
+npx shadcn-ui@latest init
+
+
+//for Dark mode
+npm install next-themes
+
+
+after that craete a folder that is named provider theme
+and put on it the neccessary config
+
+
+npx shadcn-ui@latest add button
+
+npm install lucide-react
+
+npx shadcn-ui@latest add dropdown-menu
+
+
+npx shadcn-ui@latest add dialog
+
+npx shadcn-ui@latest add command
+
