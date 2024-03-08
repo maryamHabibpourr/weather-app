@@ -20,3 +20,6 @@ npx shadcn-ui@latest add dialog
 
 npx shadcn-ui@latest add command
 
+npm i axios
+
+npx shadcn-ui@latest add skeleton
