@@ -2,8 +2,8 @@
 import axios from "axios";
 import React, { useContext, createContext, useState, useEffect } from "react";
 import defaultStates from "../utils/defaultStates";
-
 import { debounce } from "lodash";
+
 
 
 
@@ -32,6 +32,7 @@ export const GlobalContextProvider = ({ children }) => {
 
 
 
+
   const fetchForecast = async (lat, lon) => {
     try {
       const res = await axios.get(`api/weather?lat=${lat}&lon=${lon}`);
@@ -42,6 +43,7 @@ export const GlobalContextProvider = ({ children }) => {
       console.log("Error fetching forecast data: ", error.message);
     }
   };
+
 
 
 
@@ -91,6 +93,8 @@ export const GlobalContextProvider = ({ children }) => {
 
 
 
+
+
   //fetch uv data
   const fetchUvIndex = async (lat, lon) => {
     try {
@@ -133,6 +137,8 @@ export const GlobalContextProvider = ({ children }) => {
 
 
 
+
+
   useEffect(() => {
     fetchForecast(activeCityCoords[0], activeCityCoords[1]);
     fetchAirQuality(activeCityCoords[0], activeCityCoords[1]);
@@ -140,6 +146,7 @@ export const GlobalContextProvider = ({ children }) => {
     fetchUvIndex(activeCityCoords[0], activeCityCoords[1]);
     fetchGeoCodedList("liverpool")
   }, [activeCityCoords]);
+
 
 
 
@@ -168,6 +175,7 @@ export const GlobalContextProvider = ({ children }) => {
     </GlobalContext.Provider>
   );
 };
+
 
 
 
